@@ -1,0 +1,5 @@
+
+.cu-form-group{
+		min-width: calc(4em + 15px);
+}
+
