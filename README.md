@@ -1,17 +1,14 @@
 ﻿<h1 align="center">
 <img src="https://images.gitee.com/uploads/images/2020/0202/135731_797d637c_5657189.png" alt="YUKI" width="200" />
   <br>
-  穿啥 :tw-1f455:（物联网智能衣柜项目）
-  <br>
+  穿啥（物联网智能衣柜项目）
   <br>
 </h1>
 
-#### [点我前往官网](http://maosu.vicp.io/穿啥APP官网/index.html)
-
-### 下载  
-[点击这里](https://gitee.com/MaoSuSu/wear_what_app/releases)
-
-
+<h4 align="center">
+  <a href="http://maosu.vicp.io/穿啥APP官网/index.html">官网</a> •
+  <a href="https://gitee.com/MaoSuSu/wear_what_app/releases">下载地址</a>
+</h4>
 
 ## 项目介绍  
     随着物联网的兴起，智能家具开始普及于千家万户。市场上的智能家具已大放异彩，却鲜有人设计出一款多功能的智能衣柜。你是否还在为出们该穿啥、我的衣服都有啥、衣服要如何护理等等问题所困扰？这便是我们的项目的方向和解决的痛点。
