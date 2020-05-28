@@ -28,13 +28,13 @@
 
 ## 演示视频
 
-    BiliBili：
-    YouTube：
+- BiliBili：
+- YouTube：
 
 ## APP支持平台
 
-    Android（兼容arm32、arm64、X86）
-    （IOS暂未发行计划）
+- Android（兼容arm32、arm64、X86）
+- （IOS暂未发行计划）
 
 ## APP各页面介绍
 
