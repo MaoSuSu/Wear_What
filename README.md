@@ -1,7 +1,7 @@
 ﻿<h1 align="center">
 <img src="https://images.gitee.com/uploads/images/2020/0202/135731_797d637c_5657189.png" alt="LOGO" width="200" />
   <br>
-  穿啥（物联网智能衣柜项目）
+  穿啥（物联网智能衣柜）
   <br>
 </h1>
 
