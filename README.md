@@ -21,12 +21,12 @@ APP截图：![APP主页](https://images.gitee.com/uploads/images/2020/0518/19084
     BiliBili：
     YouTube：
 
-### APP支持平台
+## APP支持平台
 
     Android（兼容arm32、arm64、X86）
     （IOS暂未发行计划）
 
-#### APP各页面介绍
+## APP各页面介绍
 
     1.  衣柜：面板显示用户衣服信息，可定位支持的衣服类型
     2.  推荐：用户选择出席场合，AI推荐至多三件衣服
@@ -37,7 +37,7 @@ APP截图：![APP主页](https://images.gitee.com/uploads/images/2020/0518/19084
             护理选项：手动控制衣柜设备
     5.  我的：用户账户信息显示
 
-#### 项目编程语言、环境及软件
+## 项目编程语言、环境及软件
 
     服务器配置:LAMP（服务端部署时注意文件的执行权限！）
     APP编写：Vue.js
@@ -45,7 +45,7 @@ APP截图：![APP主页](https://images.gitee.com/uploads/images/2020/0518/19084
     设备交互：Python3
     树莓派依赖包：pip3安装
 
-#### 硬件组成清单
+## 硬件组成清单
 
     树莓派4B（1）
     Risym 1路继电器（3）
@@ -62,6 +62,6 @@ APP截图：![APP主页](https://images.gitee.com/uploads/images/2020/0518/19084
     木制衣柜外壳（1）
     3D打印衣柜内置支架（？）
 
-#### BUG记录
+## BUG记录
 
     拍照录入无法上传图片
