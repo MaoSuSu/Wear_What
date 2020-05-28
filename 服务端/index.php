@@ -10,7 +10,7 @@ if($_GET['token'] != 'api2020'){exit(jsonCode('error', 'token error 2'));}
 
 // 文件夹定义
 define("HS_DS"            , DIRECTORY_SEPARATOR);
-define("HS_ROOT"          , dirname(__FILE__).HS_DS);
+define("HS_ROOT"          , dirname(__FILE__).HS_DS);  #获取文件的起始路径
 define("HS_CONTROLLERS"   , HS_ROOT.'controllers'.HS_DS);
 define("HS_MODELS"        , HS_ROOT.'models'.HS_DS);
 define("HS_TOOLS"         , HS_ROOT.'tools'.HS_DS);

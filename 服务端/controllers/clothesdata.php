@@ -8,6 +8,38 @@ class clothesdata{
         exit(jsonCode('ok', $clothedata));
 	}
 	
+	public function lightdx(){
+		exec('sudo python3 ./py/light_dx.py',$out);
+		# 所有文件的起始路径以index.php的位置为准！
+		foreach($out as $value){
+        }
+        exit(jsonCode('ok', $value));
+	}
+
+	public function lightcx(){
+		exec('sudo python3 ./py/light_cx.py',$out);
+        # 所有文件的起始路径以index.php的位置为准！
+		foreach($out as $value){
+        }
+        exit(jsonCode('ok', $value));
+	}
+
+	public function lightwt(){
+		exec('sudo python3 ./py/light_wt.py',$out);
+        # 所有文件的起始路径以index.php的位置为准！
+		foreach($out as $value){
+        }
+        exit(jsonCode('ok', $value));
+	}
+
+	public function lightdk(){
+		exec('sudo python3 ./py/light_dk.py',$out);
+        # 所有文件的起始路径以index.php的位置为准！
+		foreach($out as $value){
+        }
+        exit(jsonCode('ok', $value));
+	}
+
 	public function iflike(){
 		//检查参数是否正常
 		if(empty($_POST['iflike_clo_name'])){exit(jsonCode('error', 'iflike_clo_name 不存在'));}
