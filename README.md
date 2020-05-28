@@ -1,5 +1,5 @@
 ﻿<h1 align="center">
-<img src="https://images.gitee.com/uploads/images/2020/0202/135731_797d637c_5657189.png" alt="YUKI" width="200" />
+<img src="https://images.gitee.com/uploads/images/2020/0202/135731_797d637c_5657189.png" alt="LOGO" width="200" />
   <br>
   穿啥（物联网智能衣柜项目）
   <br>
@@ -10,6 +10,11 @@
   <a href="https://gitee.com/MaoSuSu/wear_what_app/releases">下载地址</a>
 </h4>
 
+﻿<p align="center">
+    <img src="https://images.gitee.com/uploads/images/2020/0518/190847_4098b4a8_5657189.jpeg" />
+    <img src="https://images.gitee.com/uploads/images/2020/0518/190847_4098b4a8_5657189.jpeg" />
+</p>
+
 ## 项目介绍  
 随着物联网的兴起，智能家具开始普及于千家万户。市场上的智能家具已大放异彩，却鲜有人设计出一款多功能的智能衣柜。
 
@@ -17,8 +22,7 @@
 
 为了解决这个生活问题和痛点，这便是我们的立项初衷。
 
-APP截图：![APP主页](https://images.gitee.com/uploads/images/2020/0518/190847_4098b4a8_5657189.jpeg "APP主页.jpg")
-衣柜外观实拍：
+
 
 ## 演示视频
 
