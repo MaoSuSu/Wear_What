@@ -1,12 +1,13 @@
 ﻿<h1 align="center">
-  ![logo](https://images.gitee.com/uploads/images/2020/0202/135731_797d637c_5657189.png "logo_meitu_1.png")
+  
+<img src="https://images.gitee.com/uploads/images/2020/0202/135731_797d637c_5657189.png" alt="YUKI" width="200" />
   <br>
   穿啥 :tw-1f455:（物联网智能衣柜项目）
   <br>
   <br>
 </h1>
 
-
+![logo](https://images.gitee.com/uploads/images/2020/0202/135731_797d637c_5657189.png "logo_meitu_1.png")
 
 #### [点我前往官网](http://maosu.vicp.io/穿啥APP官网/index.html)
 
