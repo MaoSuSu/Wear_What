@@ -6,7 +6,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/support-android4.0+-3DDC84?logo=Android">
+  <img src="https://img.shields.io/badge/support-android4.4+-3DDC84?logo=Android">
   <img src="https://img.shields.io/badge/language-vue-4FC08D?logo=Vue.js">
   <img src="https://img.shields.io/badge/language-python3-3776AB?logo=Python">
   <img src="https://img.shields.io/badge/web_server-lamb-D22128?logo=Apache">
