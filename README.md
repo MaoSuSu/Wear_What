@@ -6,11 +6,11 @@
 </h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/support-android+-orange">
-  <img src="https://img.shields.io/badge/language-vue-brightgreen">
-  <img src="https://img.shields.io/badge/language-python3-blue">
-  <img src="https://img.shields.io/badge/web_server-lamb-yellow">
-  <img src="https://img.shields.io/badge/server_os-raspberry_pi_os-red">
+  <img src="https://img.shields.io/badge/support-android+-3DDC84?logo=Android">
+  <img src="https://img.shields.io/badge/language-vue-4FC08D?logo=Vue.js">
+  <img src="https://img.shields.io/badge/language-python3-3776AB?logo=Python">
+  <img src="https://img.shields.io/badge/web_server-lamb-D22128?logo=Apache">
+  <img src="https://img.shields.io/badge/server_os-raspberry_pi_os-C51A4A?logo=Raspberry Pi">
   <img src="https://img.shields.io/badge/intranet_penetration-花生壳-ff69b4">
 </p>
 
