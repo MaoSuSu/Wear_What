@@ -1,9 +1,18 @@
-﻿<h1 align="center">
+<h1 align="center">
 <img src="https://images.gitee.com/uploads/images/2020/0202/135731_797d637c_5657189.png" alt="LOGO" width="200" />
   <br>
   穿啥（智能衣柜）
   <br>
 </h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/support-android+-orange">
+  <img src="https://img.shields.io/badge/language-vue-brightgreen">
+  <img src="https://img.shields.io/badge/language-python3-blue">
+  <img src="https://img.shields.io/badge/web_server-lamb-yellow">
+  <img src="https://img.shields.io/badge/server_os-raspberry_pi_os-red">
+  <img src="https://img.shields.io/badge/intranet_penetration-花生壳-ff69b4">
+</p>
 
 <h4 align="center">
   <a href="http://maosu.vicp.io/穿啥APP官网/index.html">官网</a> •
@@ -24,17 +33,10 @@
 
 为了解决这个生活问题和痛点，这便是我们的立项初衷。
 
-
-
 ## 演示视频
 
 - BiliBili：
 - YouTube：
-
-## APP支持平台
-
-- Android（兼容arm32、arm64、X86）
-- （IOS暂未发行计划）
 
 ## APP各页面介绍
 
@@ -46,14 +48,6 @@
     - 智能消毒：（算法）首先对衣物消毒30分钟，而后通风10分钟
     - 护理选项：手动控制衣柜设备
 - 我的：用户账户信息显示
-
-## 项目编程语言、环境及软件
-
-- 服务器配置:LAMP（服务端部署时注意文件的执行权限！）
-- APP编写：Vue.js
-- 内网穿透软件：花生壳
-- 设备交互：Python3
-- 树莓派依赖包：pip3安装
 
 ## 硬件组成清单
 
