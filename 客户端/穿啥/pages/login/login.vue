@@ -18,7 +18,7 @@
 			</view>
 		</view>
 		<view class="login-btn">
-			<button class="landing" type="primary" @click="go_login">登 陆</button>
+			<button class="landing" type="primary" @click="go_login">登 录</button>
 		</view>
 	</view>
 </template>
