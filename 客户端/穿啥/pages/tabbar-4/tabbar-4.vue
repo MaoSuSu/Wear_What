@@ -178,10 +178,10 @@
 				// 按钮界面变换
 				if(_self.All_state.intelligent_nursing == 1){
 					_self.All_state.intelligent_nursing = 0;
-					_self.All_state.ventilator = 0;
+					_self.All_state.purple_lamp = 0;
 				}else{
 					_self.All_state.intelligent_nursing = 1;
-					_self.All_state.ventilator = 1;
+					_self.All_state.purple_lamp = 1;
 				}
 				uni.request({
 					url: this.apiServer + 'clothesnursing&m=IntelligentNursing',
