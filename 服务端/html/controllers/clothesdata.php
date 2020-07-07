@@ -7,37 +7,41 @@ class clothesdata{
 		$clothedata = $dbClothes->where('clo_u_name = ?', array($_POST['u_name']))->fetchAll();
         exit(jsonCode('ok', $clothedata));
 	}
-	
-	public function lightdx(){
-		exec('sudo python3 ./py/light_dx.py',$out);
-		# 所有文件的起始路径以index.php的位置为准！
-		foreach($out as $value){
-        }
-        exit(jsonCode('ok', $value));
+
+	public function clight(){
+		//点亮不同的定位灯
+		if($_POST['id'] == 0){
+			exec('sudo python3 ./py/light1.py',$out);
+			# 所有文件的起始路径以index.php的位置为准！
+			foreach($out as $value){
+			}
+			exit(jsonCode('ok', $value));
+		}elseif($_POST['id'] == 1){
+			exec('sudo python3 ./py/light2.py',$out);
+			# 所有文件的起始路径以index.php的位置为准！
+			foreach($out as $value){
+			}
+			exit(jsonCode('ok', $value));
+		}elseif($_POST['id'] == 2){
+			exec('sudo python3 ./py/light3.py',$out);
+			# 所有文件的起始路径以index.php的位置为准！
+			foreach($out as $value){
+			}
+			exit(jsonCode('ok', $value));
+		}else{
+			exec('sudo python3 ./py/light4.py',$out);
+			# 所有文件的起始路径以index.php的位置为准！
+			foreach($out as $value){
+			}
+			exit(jsonCode('ok', $value));
+		}
 	}
 
-	public function lightcx(){
-		exec('sudo python3 ./py/light_cx.py',$out);
-        # 所有文件的起始路径以index.php的位置为准！
-		foreach($out as $value){
-        }
-        exit(jsonCode('ok', $value));
-	}
-
-	public function lightwt(){
-		exec('sudo python3 ./py/light_wt.py',$out);
-        # 所有文件的起始路径以index.php的位置为准！
-		foreach($out as $value){
-        }
-        exit(jsonCode('ok', $value));
-	}
-
-	public function lightdk(){
-		exec('sudo python3 ./py/light_dk.py',$out);
-        # 所有文件的起始路径以index.php的位置为准！
-		foreach($out as $value){
-        }
-        exit(jsonCode('ok', $value));
+	public function setlightid(){
+		$dbClothes = \hsTool\db::getInstance('clothes');
+		$data = array('clo_dingwei' => $_POST['id']);
+		$dbClothes->where('clo_name = ?', array($_POST['cname']))->update($data);
+        exit(jsonCode('ok', $_POST['cname'].'定位修改为'.$_POST['id']));
 	}
 
 	public function iflike(){
@@ -164,6 +168,11 @@ class clothesdata{
 			//默认未喜欢 0
 			'clo_iflike'     => 0,
 			'clo_image'    => $_POST['image'],
+			'clo_work'    => $_POST['work_num'],
+			'clo_sport'    => $_POST['sport_num'],
+			'clo_relaxation'    => $_POST['relaxation_num'],
+			'clo_feast'    => $_POST['feast_num'],
+			'clo_travel'    => $_POST['travel_num'],
 			'clo_createtime' => date("Y年m月d日,H:i:s",time())
 		);
 		$clotheId = $dbClothes->add($addData);

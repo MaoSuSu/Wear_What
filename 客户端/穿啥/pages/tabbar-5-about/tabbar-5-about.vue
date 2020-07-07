@@ -8,8 +8,8 @@
 			<image class="logo response" src="../../static/logo/logo.png" mode="aspectFit"></image>
 		</view>
 		<view class="padding bg-white">
-			<view class="text-center padding">感谢您使用多功能智能衣柜APP！</view>
-			<view class="text-center padding">版本：V2.0</view>
+			<view class="text-center padding">感谢您的使用！</view>
+			<view class="text-center padding">版本：V2.1.1</view>
 		</view>
 	</view>
 </template>

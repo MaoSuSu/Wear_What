@@ -11,5 +11,5 @@ for i in range(3):
         GPIO.output(wt_LED, GPIO.LOW) 
         time.sleep(0.5)
         
-print('外套已定位')
+print('3号衣架已定位')
 GPIO.cleanup() 

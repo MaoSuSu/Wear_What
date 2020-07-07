@@ -20,34 +20,13 @@
 						<view class="action">
 							<text class="cuIcon-title text-red"></text> 
 								{{item.name}}
-								<!-- 定位衣服类型 -->
-								<view v-if="item.name == '短袖'">
-									<button class="cu-btn cuIcon margin-left-xs">
-										<text class="cuIcon-creative text-red" @tap="light_dx()"></text>
-									</button>
-								</view>
-								<view v-if="item.name == '长袖'">
-									<button class="cu-btn cuIcon margin-left-xs">
-										<text class="cuIcon-creative text-red" @tap="light_cx()"></text>
-									</button>
-								</view>
-								<view v-if="item.name == '外套'">
-									<button class="cu-btn cuIcon margin-left-xs">
-										<text class="cuIcon-creative text-red" @tap="light_wt()"></text>
-									</button>
-								</view>
-								<view v-if="item.name == '短裤'">
-									<button class="cu-btn cuIcon margin-left-xs">
-										<text class="cuIcon-creative text-red" @tap="light_dk()"></text>
-									</button>
-								</view>	
 						</view>
 					</view>
 					<view class="cu-list menu-avatar">
 						<view class="cu-item" v-for="(clodata,i) in All_clothes_data" :key="clodata.clo_id" v-if="All_clothes_data[i].clo_type == item.name">
-							<!-- 照片 -->
+							<!-- 照片，点击照片弹出定位窗口 -->
 							<view class="padding justify-start margin-right-xl">
-								<img class="cu-avatar radius xl margin-right-xl" :src="All_clothes_data[i].clo_image" />
+								<img class="cu-avatar radius xl margin-right-xl" :src="All_clothes_data[i].clo_image" @tap="showModal" data-target="Modal" :data-ms="All_clothes_data[i].clo_name" :data-id="All_clothes_data[i].clo_dingwei"/>
 							</view>
 							<view class="content">
 								<view class="text-red">
@@ -128,6 +107,38 @@
 				</view>
 			</scroll-view>
 		</view>
+		<!-- 定位窗口弹出 -->
+		<view class="cu-modal" :class="modalName=='Modal'?'show':''" @tap="hideModal">
+			<view class="cu-dialog">
+				<view class="cu-bar bg-white justify-end">
+					<view class="content">衣服定位设置</view>
+					<view class="action" @tap="hideModal">
+						<text class="cuIcon-close text-red"></text>
+					</view>
+				</view>
+				<view class="padding-xl">
+					为<text class="text-red">{{nowname}}</text>设置一个定位衣架
+				</view>
+				<!-- <img class="bg-img" :src="All_clothes_data[i].clo_image"/> -->
+				<view class="cu-dialog" @tap.stop="">
+					<radio-group class="block" @change="RadioChange">
+						<view class="cu-list menu text-left">
+							<view class="cu-item" v-for="(item,index) in 4" :key="index">
+								<label class="flex justify-between align-center flex-sub">
+									<view class="flex-sub">定位衣架 {{index +1}}</view>
+									<radio class="round" :class="radio==index?'checked':''" :checked="radio==index?true:false" :value="index"></radio>
+								</label>
+							</view>
+						</view>
+					</radio-group>
+				</view>
+				<view class="cu-bar bg-white">
+					<view class="action margin-0 flex-sub cuIcon-creative text-red solid-left" @tap="clight">定位</view>
+					<view class="action margin-0 flex-sub solid-left" @tap="setlightid">确定</view>
+				</view>
+			</view>
+		</view>
+		
 	</view>
 </template>
 
@@ -137,6 +148,9 @@
 	export default {
 		data() {
 			return {
+				radio: null,
+				modalName: null,
+				nowname: null,
 				list: [],
 				tabCur: 0,
 				mainCur: 0,
@@ -190,16 +204,29 @@
 			signModel.sign(_self.apiServer);
 		},
 		methods: {
-			// 定位衣服类型函数
-			light_dx() {
+			RadioChange(e) {
+				this.radio = e.detail.value
+			},
+			showModal(e) {
+				this.modalName = e.currentTarget.dataset.target;
+				this.nowname = e.currentTarget.dataset.ms;
+				this.radio = e.currentTarget.dataset.id;
+				console.log(JSON.stringify(this.radio));
+			},
+			hideModal(e) {
+				this.modalName = null
+			},
+			// 定位衣服
+			clight(){
+				_self.setlightid();
 				uni.request({
-					url: this.apiServer + 'clothesdata&m=lightdx',
+					url: this.apiServer + 'clothesdata&m=clight',
 					method: 'POST',
 					header: {
 						'content-type': "application/x-www-form-urlencoded"
 					},
 					data: {
-						
+						id:this.radio
 					},
 					success: res => {
 						if (res.data.status == 'ok') {
@@ -208,54 +235,27 @@
 					}
 				});
 			},
-			light_cx() {
+			// 设置衣服的定位id
+			setlightid(){
 				uni.request({
-					url: this.apiServer + 'clothesdata&m=lightcx',
+					url: this.apiServer + 'clothesdata&m=setlightid',
 					method: 'POST',
 					header: {
 						'content-type': "application/x-www-form-urlencoded"
 					},
 					data: {
-
+						cname:this.nowname,
+						id:this.radio
 					},
 					success: res => {
 						if (res.data.status == 'ok') {
+							this.radio = e.currentTarget.dataset.id;
 							console.log(JSON.stringify(res.data.data));
 						}
-					}
-				});
-			},
-			light_wt() {
-				uni.request({
-					url: this.apiServer + 'clothesdata&m=lightwt',
-					method: 'POST',
-					header: {
-						'content-type': "application/x-www-form-urlencoded"
 					},
-					data: {
-
-					},
-					success: res => {
-						if (res.data.status == 'ok') {
-							console.log(JSON.stringify(res.data.data));
-						}
-					}
-				});
-			},
-			light_dk() {
-				uni.request({
-					url: this.apiServer + 'clothesdata&m=lightdk',
-					method: 'POST',
-					header: {
-						'content-type': "application/x-www-form-urlencoded"
-					},
-					data: {
-			
-					},
-					success: res => {
-						if (res.data.status == 'ok') {
-							console.log(JSON.stringify(res.data.data));
-						}
+					complete() {
+						_self.getClothes();
+						_self.hideModal();
 					}
 				});
 			},

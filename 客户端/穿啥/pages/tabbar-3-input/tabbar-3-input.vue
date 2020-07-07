@@ -52,8 +52,76 @@
 				</picker>
 			</view>
 		</view>
+		<!-- 衣服喜好程度评分 -->
+		<view class="cu-bar bg-white solid-bottom margin-top">
+			<view class="action">
+				<text class="cuIcon-title text-red"></text> 衣服喜好程度评分
+			</view>
+		</view>
+		<view class="cu-list menu">
+			<view class="cu-item">
+				<view class="content padding-tb-sm">
+					<view>
+						<text class="cuIcon-group text-red margin-right-xs"></text>
+						<text class="text-red"> 办公 </text>
+					</view>
+				</view>
+				<view class="content">
+					<input type="number" maxlength="3" v-model="work_num" placeholder="评分范围:0~100"></input>
+				</view>
+			</view>
+			
+			<view class="cu-item">
+				<view class="content padding-tb-sm">
+					<view>
+						<text class="cuIcon-footprint text-red margin-right-xs"></text> 
+						<text class="text-red"> 运动 </text>
+					</view>
+				</view>	
+				<view class="content">
+					<input type="number" maxlength="3" v-model="sport_num" placeholder="评分范围:0~100"></input>
+				</view>
+			</view>
+			
+			<view class="cu-item">
+				<view class="content padding-tb-sm">
+					<view>
+						<text class="cuIcon-game text-red margin-right-xs"></text> 
+						<text class="text-red"> 休闲 </text>
+					</view>
+				</view>	
+				<view class="content">
+					<input type="number" maxlength="3" v-model="relaxation_num" placeholder="评分范围:0~100"></input>
+				</view>
+			</view>
+			
+			<view class="cu-item">
+				<view class="content padding-tb-sm">
+					<view>
+						<text class="cuIcon-evaluate text-red margin-right-xs"></text> 
+						<text class="text-red"> 宴会 </text>
+					</view>
+				</view>	
+				<view class="content">
+					<input type="number" maxlength="3" v-model="feast_num" placeholder="评分范围:0~100"></input>
+				</view>
+			</view>
+			
+			<view class="cu-item">
+				<view class="content padding-tb-sm">
+					<view>
+						<text class="cuIcon-explore text-red margin-right-xs"></text> 
+						<text class="text-red"> 旅游 </text>
+					</view>
+				</view>	
+				<view class="content">
+					<input type="number" maxlength="3" v-model="travel_num" placeholder="评分范围:0~100"></input>
+				</view>
+			</view>
+		</view>
+		
 		<!-- 提交按钮 -->
-		<view class="submitNow padding flex flex-direction margin-top-xl">
+		<view class="submitNow padding flex flex-direction">
 			<button class="cu-btn round bg-gradual-red shadow-blur lg margin-top-xl" @tap="submitNow">提交</button>
 		</view>
 	</view>
@@ -70,6 +138,11 @@
 				imgList: [],
 				needUploadImg: [],
 				uploadIndex: 0,
+				work_num: '',
+				sport_num: '',
+				relaxation_num: '',
+				feast_num: '',
+				travel_num: '',
 				//分类
 				type: ['选择衣服的类型'],
 				color: ['选择衣服的颜色'],
@@ -276,6 +349,46 @@
 					});
 					return;
 				}
+				if (this.work_num.length < 1 || Number(this.work_num) > 100) {
+					uni.showToast({
+						icon: 'none',
+						position: 'bottom',
+						title: '办公评分未填写或填写不合法'
+					});
+					return;
+				}
+				if (this.sport_num.length < 1 || Number(this.sport_num) > 100) {
+					uni.showToast({
+						icon: 'none',
+						position: 'bottom',
+						title: '运动评分未填写或填写不合法'
+					});
+					return;
+				}
+				if (this.relaxation_num.length < 1 || Number(this.relaxation_num) > 100) {
+					uni.showToast({
+						icon: 'none',
+						position: 'bottom',
+						title: '休闲评分未填写或填写不合法'
+					});
+					return;
+				}
+				if (this.feast_num.length < 1 || Number(this.feast_num) > 100) {
+					uni.showToast({
+						icon: 'none',
+						position: 'bottom',
+						title: '宴会评分未填写或填写不合法'
+					});
+					return;
+				}
+				if (this.travel_num.length < 1 || Number(this.travel_num) > 100) {
+					uni.showToast({
+						icon: 'none',
+						position: 'bottom',
+						title: '旅游评分未填写或填写不合法'
+					});
+					return;
+				}
 				// 上传图片 一次一个多次上传 [ 递归函数 ]
 				// 上传完成后整体提交数据
 				// 首先整理一下需要上传的图片
@@ -309,7 +422,12 @@
 							t: _self.sedTypeIndex,
 							c: _self.sedColorIndex,
 							s: _self.sedSeasonIndex,
-							sign: sign
+							sign: sign,
+							work_num:_self.work_num,
+							sport_num:_self.sport_num,
+							relaxation_num:_self.relaxation_num,
+							feast_num:_self.feast_num,
+							travel_num:_self.travel_num
 						},
 						success: function(res) {
 							if (res.data.status == 'ok') {
