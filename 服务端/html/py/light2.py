@@ -1,14 +1,14 @@
 import RPi.GPIO as GPIO
 import time
 
-cx_LED = 31 #长袖灯
+LED = 31 #2号灯
 GPIO.setmode(GPIO.BOARD) 
-GPIO.setup(cx_LED, GPIO.OUT) 
+GPIO.setup(LED, GPIO.OUT) 
 
 for i in range(3): 
-        GPIO.output(cx_LED, GPIO.HIGH) 
+        GPIO.output(LED, GPIO.HIGH) 
         time.sleep(0.5) 
-        GPIO.output(cx_LED, GPIO.LOW) 
+        GPIO.output(LED, GPIO.LOW) 
         time.sleep(0.5)
         
 print('2号衣架已定位')
