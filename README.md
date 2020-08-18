@@ -35,7 +35,7 @@
 
 ## 演示视频
 
-- BiliBili：
+- BiliBili：https://www.bilibili.com/video/bv1rK4y1Y72u
 - YouTube：
 
 ## APP各页面介绍（页面内容以最新版本APP为准）
