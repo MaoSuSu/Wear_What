@@ -26,6 +26,11 @@
     <img src="https://images.gitee.com/uploads/images/2020/0528/144522_0ea79d37_5657189.jpeg" alt="示例4" />
 </p>
 
+﻿<p align="center">
+    <img src="https://images.gitee.com/uploads/images/2021/0122/171150_4f95dedc_5657189.jpeg" alt="立体图" />
+    <img src="https://images.gitee.com/uploads/images/2021/0122/171208_5c8d545e_5657189.jpeg" alt="内部结构图" />
+</p>
+
 ## 项目介绍  
 随着物联网的兴起，智能家具开始普及于千家万户。市场上的智能家具已大放异彩，却鲜有人设计出一款多功能的智能衣柜。
 
